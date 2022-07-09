@@ -52,20 +52,16 @@ job "pihole" {
             driver = "docker"
             config {
                 image = "pihole/pihole:latest"
-                mounts = [
-                    {
-                        type     = "bind"
-                        target   = "/etc/pihole"
-                        source   = "${var.volume_path}/pihole"
-                        readonly = false
-                    },
-                    {
-                        type     = "bind"
-                        target   = "/etc/dnsmasq.d"
-                        source   = "${var.volume_path}/dnsmasq.d"
-                        readonly = false
-                    },
-                ]
+                volume_mount {
+                    volume      = "pihole-data"
+                    destination = "/etc/pihole"
+                    read_only   = false
+                }
+                volume_mount {
+                    volume      = "dns-data"
+                    destination = "/etc/dnsmasq.d"
+                    read_only   = false
+                }
                 port_map {
                     dns  = 53
                     http = 80
