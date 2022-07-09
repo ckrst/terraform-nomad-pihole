@@ -54,8 +54,8 @@ permissions:
   contents: read
 
 jobs:
-  terraform:
-    name: 'Terraform'
+  pipeline:
+    name: 'Pipeline'
     runs-on: ubuntu-latest
     environment: production
 
