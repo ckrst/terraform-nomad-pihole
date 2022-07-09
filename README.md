@@ -5,7 +5,8 @@ provider nomad {
     address = "http://192.168.15.6:4646"
     region  = "global"
 }
-
+```
+```
 module "pihole" {
     source = "github.com/ckrst/terraform-nomad-pihole?ref=v0.0.1"
 
