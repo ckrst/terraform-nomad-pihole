@@ -92,5 +92,6 @@ jobs:
         github_token: ${{ secrets.TAG_TOKEN }}
         default_bump: patch
         release_branches: main
+        tag: v0.0.2
 
     
