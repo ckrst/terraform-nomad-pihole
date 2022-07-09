@@ -90,6 +90,5 @@ jobs:
       uses: laputansoft/github-tag-action@v4.6
       with:
         github_token: ${{ secrets.TAG_TOKEN }}
-        tag: ${{ steps.package-version.outputs.version }}
 
     
