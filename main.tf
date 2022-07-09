@@ -1,8 +1,4 @@
 
-provider nomad {
-
-}
-
 resource "nomad_job" "pihole" {
     hcl2 {
         enabled = true
