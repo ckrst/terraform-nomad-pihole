@@ -89,7 +89,7 @@ jobs:
     - name: Bump version and push tag
       uses: laputansoft/github-tag-action@v4.6
       with:
-        github_token: ${{ env.TAG_TOKEN }}
+        github_token: ${{ secrets.TAG_TOKEN }}
         tag: ${{ steps.package-version.outputs.version }}
 
     
