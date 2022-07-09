@@ -1,18 +1,18 @@
 
 resource "nomad_job" "pihole" {
-    hcl2 {
-        enabled = true
-        vars = {
-            "datacenters" = "[\"dc1\"]",
-            admin_password = var.admin_password,
-            timezone = var.timezone,
-            hostname = var.hostname,
-            ip_addr = var.host_ip,
-            volume_path = var.volume_path,
-        }
+  hcl2 {
+    enabled = true
+    vars = {
+      "datacenters"  = "[\"dc1\"]",
+      admin_password = var.admin_password,
+      timezone       = var.timezone,
+      hostname       = var.hostname,
+      ip_addr        = var.host_ip,
+      volume_path    = var.volume_path,
     }
-    
-    jobspec = <<EOT
+  }
+
+  jobspec = <<EOT
 
 variable "datacenters" {
     type = list(string)
