@@ -6,6 +6,7 @@ provider nomad {
     region  = "global"
 }
 ```
+
 ```
 module "pihole" {
     source = "github.com/ckrst/terraform-nomad-pihole?ref=v0.0.1"
