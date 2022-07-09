@@ -90,5 +90,7 @@ jobs:
       uses: laputansoft/github-tag-action@v4.6
       with:
         github_token: ${{ secrets.TAG_TOKEN }}
+        default_bump: patch
+        release_branches: main
 
     
