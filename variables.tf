@@ -5,7 +5,7 @@ variable "timezone" {
 }
 variable "hostname" {}
 variable "host_ip" {
-    default = "127.0.0.1"
+  default = "127.0.0.1"
 }
 variable "volume_path" {
   default = "/opt/nomad/data/pihole"
