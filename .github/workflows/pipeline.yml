@@ -86,12 +86,10 @@ jobs:
     - name: Terraform Format
       run: terraform fmt -check
 
-    - name: Generate Release
-      uses: "marvinpinto/action-automatic-releases@latest"
+    - name: Bump version and push tag
+      uses: laputansoft/github-tag-action@v4.6
       with:
-        repo_token: "${{ secrets.GITHUB_TOKEN }}"
-        automatic_release_tag: "latest"
-        prerelease: true
-        title: "Development Build"
+        github_token: ${{ env.github-token }}
+        tag: ${{ steps.package-version.outputs.version }}
 
     
